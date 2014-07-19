@@ -1,0 +1,20 @@
+127.0.0.1   localhost
+::1         localhost
+
+192.168.62.1	router router.karuru.info
+192.168.62.2	win7 win7.karuur.info
+
+192.168.62.20	proxmox proxmox.karuru.info
+192.168.62.21	vm101 vm101.karuru.info
+192.168.62.22	vm102 vm102.karuru.info
+192.168.62.23	vm103 vm103.karuru.info
+192.168.62.24	vm104 vm104.karuru.info
+192.168.62.25	vm105 vm105.karuru.info
+192.168.62.26	vm106 vm106.karuru.info
+192.168.62.27	vm107 vm107.karuru.info
+192.168.62.28	vm108 vm108.karuru.info
+192.168.62.29	vm109 vm109.karuru.info
+
+192.168.62.30	sun0 sun0.karuru.info karuru.info
+192.168.62.32	sun sun.karuru.info
+

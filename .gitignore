@@ -1,2 +1,5 @@
 /cookbooks/
 .bundle
+*.lock
+solo.rb
+

@@ -83,6 +83,7 @@ file_cache_path "/tmp/chef-solo"
 cookbook_path "${BASEDIR}/cookbooks"
 data_bag_path "${BASEDIR}/data_bags"
 role_path "${BASEDIR}/roles"
+ssl_verify_mode :verify_peer
 EOF
 
 rbenv rehash
