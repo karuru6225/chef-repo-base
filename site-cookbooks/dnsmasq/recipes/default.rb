@@ -13,11 +13,17 @@ node['dnsmasq']['packages'].each{|value|
 	end
 }
 
+service "dnsmasq" do
+	service_name "dnsmasq"
+	action [:enable]
+end
+
 cookbook_file "/etc/hosts" do
 	owner "root"
 	group "root"
 	mode "0644"
 	source "hosts"
+	notifies :restart, "service[dnsmasq]", :delayed
 end
 
 cookbook_file "/etc/dnsmasq.conf" do
@@ -25,4 +31,5 @@ cookbook_file "/etc/dnsmasq.conf" do
 	group "root"
 	mode "0644"
 	source "dnsmasq.conf"
+	notifies :restart, "service[dnsmasq]", :delayed
 end
