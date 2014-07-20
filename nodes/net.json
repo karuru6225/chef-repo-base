@@ -6,6 +6,7 @@
 		"recipe[bash]",
 		"recipe[vim]",
 		"recipe[tmux]",
+		"recipe[iptables]",
 		"recipe[dnsmasq]"
 	]
 }

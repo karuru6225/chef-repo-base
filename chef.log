@@ -1,0 +1,220 @@
+# Logfile created on 2014-07-19 20:13:47 +0900 by logger.rb/31641
+[2014-07-19T20:13:47+09:00] INFO: Forking chef instance to converge...
+[2014-07-19T20:13:47+09:00] DEBUG: Fork successful. Waiting for new chef pid: 17631
+[2014-07-19T20:13:47+09:00] DEBUG: Forked instance now converging
+[2014-07-19T20:13:47+09:00] WARN: 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+SSL validation of HTTPS requests is disabled. HTTPS connections are still
+encrypted, but chef is not able to detect forged replies or man in the middle
+attacks.
+
+To fix this issue add an entry like this to your configuration file:
+
+```
+  # Verify all HTTPS connections (recommended)
+  ssl_verify_mode :verify_peer
+
+  # OR, Verify only connections to chef-server
+  verify_api_cert true
+```
+
+To check your SSL configuration, or troubleshoot errors, you can use the
+`knife ssl check` command like so:
+
+```
+  knife ssl check -c solo.rb
+```
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+[2014-07-19T20:13:47+09:00] INFO: *** Chef 11.12.8 ***
+[2014-07-19T20:13:47+09:00] INFO: Chef-client pid: 17631
+[2014-07-19T20:13:47+09:00] DEBUG: Chef-client request_id: 7fa22262-0fb1-43cd-865f-fd00e292084e
+[2014-07-19T20:13:50+09:00] DEBUG: Building node object for localhost
+[2014-07-19T20:13:50+09:00] DEBUG: Extracting run list from JSON attributes provided on command line
+[2014-07-19T20:13:50+09:00] INFO: Setting the run_list to ["recipe[yum-epel]", "recipe[ssh]", "recipe[basic-packages]", "recipe[bash]", "recipe[vim]", "recipe[tmux]", "recipe[dnsmasq]"] from CLI options
+[2014-07-19T20:13:50+09:00] DEBUG: Applying attributes from json file
+[2014-07-19T20:13:50+09:00] DEBUG: Platform is centos version 6.5
+[2014-07-19T20:13:50+09:00] INFO: Run List is [recipe[yum-epel], recipe[ssh], recipe[basic-packages], recipe[bash], recipe[vim], recipe[tmux], recipe[dnsmasq]]
+[2014-07-19T20:13:50+09:00] INFO: Run List expands to [yum-epel, ssh, basic-packages, bash, vim, tmux, dnsmasq]
+[2014-07-19T20:13:50+09:00] INFO: Starting Chef Run for localhost
+[2014-07-19T20:13:50+09:00] INFO: Running start handlers
+[2014-07-19T20:13:50+09:00] INFO: Start handlers complete.
+[2014-07-19T20:13:50+09:00] DEBUG: No chefignore file found at /root/chef-repo-net/chefignore no files will be ignored
+[2014-07-19T20:13:50+09:00] DEBUG: No chefignore file found at /root/chef-repo-net/chefignore no files will be ignored
+[2014-07-19T20:13:50+09:00] DEBUG: Cookbooks to compile: [:yum, :"yum-epel", :ssh, :"basic-packages", :bash, :vim, :tmux, :dnsmasq]
+[2014-07-19T20:13:50+09:00] DEBUG: Loading cookbook yum's library file: /root/chef-repo-net/cookbooks/yum/libraries/matchers.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook yum's attribute file /root/chef-repo-net/cookbooks/yum/attributes/main.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute yum::main
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook yum-epel's attribute file /root/chef-repo-net/cookbooks/yum-epel/attributes/epel-debuginfo.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute yum-epel::epel-debuginfo
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook yum-epel's attribute file /root/chef-repo-net/cookbooks/yum-epel/attributes/epel-source.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute yum-epel::epel-source
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook yum-epel's attribute file /root/chef-repo-net/cookbooks/yum-epel/attributes/epel-testing-debuginfo.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute yum-epel::epel-testing-debuginfo
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook yum-epel's attribute file /root/chef-repo-net/cookbooks/yum-epel/attributes/epel-testing-source.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute yum-epel::epel-testing-source
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook yum-epel's attribute file /root/chef-repo-net/cookbooks/yum-epel/attributes/epel-testing.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute yum-epel::epel-testing
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook yum-epel's attribute file /root/chef-repo-net/cookbooks/yum-epel/attributes/epel.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute yum-epel::epel
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook ssh's attribute file /root/chef-repo-net/cookbooks/ssh/attributes/default.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute ssh::default
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook basic-packages's attribute file /root/chef-repo-net/cookbooks/basic-packages/attributes/default.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute basic-packages::default
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook vim's attribute file /root/chef-repo-net/cookbooks/vim/attributes/default.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute vim::default
+[2014-07-19T20:13:50+09:00] DEBUG: Node localhost loading cookbook dnsmasq's attribute file /root/chef-repo-net/site-cookbooks/dnsmasq/attributes/default.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Attribute dnsmasq::default
+[2014-07-19T20:13:50+09:00] DEBUG: Loading cookbook yum's providers from /root/chef-repo-net/cookbooks/yum/providers/globalconfig.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loaded contents of /root/chef-repo-net/cookbooks/yum/providers/globalconfig.rb into a provider named yum_globalconfig defined in Chef::Provider::YumGlobalconfig
+[2014-07-19T20:13:50+09:00] DEBUG: Loading cookbook yum's providers from /root/chef-repo-net/cookbooks/yum/providers/repository.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loaded contents of /root/chef-repo-net/cookbooks/yum/providers/repository.rb into a provider named yum_repository defined in Chef::Provider::YumRepository
+[2014-07-19T20:13:50+09:00] DEBUG: Loading cookbook yum's resources from /root/chef-repo-net/cookbooks/yum/resources/globalconfig.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loaded contents of /root/chef-repo-net/cookbooks/yum/resources/globalconfig.rb into a resource named yum_globalconfig defined in Chef::Resource::YumGlobalconfig
+[2014-07-19T20:13:50+09:00] DEBUG: Loading cookbook yum's resources from /root/chef-repo-net/cookbooks/yum/resources/repository.rb
+[2014-07-19T20:13:50+09:00] DEBUG: Loaded contents of /root/chef-repo-net/cookbooks/yum/resources/repository.rb into a resource named yum_repository defined in Chef::Resource::YumRepository
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Recipe yum-epel via include_recipe
+[2014-07-19T20:13:50+09:00] DEBUG: Found recipe default in cookbook yum-epel
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Recipe ssh via include_recipe
+[2014-07-19T20:13:50+09:00] DEBUG: Found recipe default in cookbook ssh
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Recipe basic-packages via include_recipe
+[2014-07-19T20:13:50+09:00] DEBUG: Found recipe default in cookbook basic-packages
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Recipe bash via include_recipe
+[2014-07-19T20:13:50+09:00] DEBUG: Found recipe default in cookbook bash
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Recipe vim via include_recipe
+[2014-07-19T20:13:50+09:00] DEBUG: Found recipe default in cookbook vim
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Recipe tmux via include_recipe
+[2014-07-19T20:13:50+09:00] DEBUG: Found recipe default in cookbook tmux
+[2014-07-19T20:13:50+09:00] DEBUG: Loading Recipe dnsmasq via include_recipe
+[2014-07-19T20:13:50+09:00] DEBUG: Found recipe default in cookbook dnsmasq
+[2014-07-19T20:13:50+09:00] DEBUG: Loading from cookbook_path: /root/chef-repo-net/cookbooks, /root/chef-repo-net/site-cookbooks
+[2014-07-19T20:13:50+09:00] DEBUG: Converging node localhost
+[2014-07-19T20:13:50+09:00] INFO: Processing yum_repository[epel] action create (yum-epel::default line 25)
+[2014-07-19T20:13:50+09:00] INFO: Processing template[/etc/yum.repos.d/epel.repo] action create (/root/chef-repo-net/cookbooks/yum/providers/repository.rb line 39)
+[2014-07-19T20:13:50+09:00] DEBUG: template[/etc/yum.repos.d/epel.repo] checksumming file at /etc/yum.repos.d/epel.repo.
+[2014-07-19T20:13:50+09:00] DEBUG: calculating checksum of /tmp/chef-rendered-template20140719-17631-tso0a3 to compare with 759e91df7e89beb9edbd7219a7a5f87e01b858c6cea7077ec31d507455c3ff2e
+[2014-07-19T20:13:50+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:50+09:00] DEBUG: found target_uid == nil, so no owner was specified on resource, not managing owner
+[2014-07-19T20:13:50+09:00] DEBUG: found target_gid == nil, so no group was specified on resource, not managing group
+[2014-07-19T20:13:50+09:00] INFO: Processing execute[yum-makecache-epel] action nothing (/root/chef-repo-net/cookbooks/yum/providers/repository.rb line 53)
+[2014-07-19T20:13:50+09:00] DEBUG: Skipping execute[yum-makecache-epel] due to action :nothing
+[2014-07-19T20:13:50+09:00] INFO: Processing ruby_block[yum-cache-reload-epel] action nothing (/root/chef-repo-net/cookbooks/yum/providers/repository.rb line 59)
+[2014-07-19T20:13:50+09:00] DEBUG: Skipping ruby_block[yum-cache-reload-epel] due to action :nothing
+[2014-07-19T20:13:50+09:00] INFO: Processing package[openssh-server] action install (ssh::default line 10)
+[2014-07-19T20:13:55+09:00] DEBUG: package[openssh-server] checking yum info for openssh-server
+[2014-07-19T20:13:55+09:00] DEBUG: package[openssh-server] installed version: 5.3p1-94.el6 candidate version: 5.3p1-94.el6
+[2014-07-19T20:13:55+09:00] DEBUG: package[openssh-server] is already installed - nothing to do
+[2014-07-19T20:13:55+09:00] INFO: Processing service[openssh] action enable (ssh::default line 16)
+[2014-07-19T20:13:55+09:00] DEBUG: service[openssh] supports status, running
+[2014-07-19T20:13:55+09:00] DEBUG: service[openssh] is running
+[2014-07-19T20:13:55+09:00] DEBUG: service[openssh] already enabled - nothing to do
+[2014-07-19T20:13:55+09:00] INFO: Processing service[openssh] action restart (ssh::default line 16)
+[2014-07-19T20:13:55+09:00] DEBUG: service[openssh] supports status, running
+[2014-07-19T20:13:55+09:00] DEBUG: service[openssh] is running
+[2014-07-19T20:13:57+09:00] INFO: service[openssh] restarted
+[2014-07-19T20:13:57+09:00] INFO: Processing yum_package[man] action install (basic-packages::default line 12)
+[2014-07-19T20:13:57+09:00] DEBUG: yum_package[man] checking yum info for man
+[2014-07-19T20:13:57+09:00] DEBUG: yum_package[man] installed version: 1.6f-32.el6 candidate version: 1.6f-32.el6
+[2014-07-19T20:13:57+09:00] DEBUG: yum_package[man] is already installed - nothing to do
+[2014-07-19T20:13:57+09:00] INFO: Processing yum_package[wget] action install (basic-packages::default line 12)
+[2014-07-19T20:13:57+09:00] DEBUG: yum_package[wget] checking yum info for wget
+[2014-07-19T20:13:57+09:00] DEBUG: yum_package[wget] installed version: 1.12-1.11.el6_5 candidate version: 1.12-1.11.el6_5
+[2014-07-19T20:13:57+09:00] DEBUG: yum_package[wget] is already installed - nothing to do
+[2014-07-19T20:13:57+09:00] INFO: Processing yum_package[unzip] action install (basic-packages::default line 12)
+[2014-07-19T20:13:57+09:00] DEBUG: yum_package[unzip] checking yum info for unzip
+[2014-07-19T20:13:57+09:00] DEBUG: yum_package[unzip] installed version: 6.0-1.el6 candidate version: 6.0-1.el6
+[2014-07-19T20:13:57+09:00] DEBUG: yum_package[unzip] is already installed - nothing to do
+[2014-07-19T20:13:57+09:00] INFO: Processing file[/etc/skel/.bash_history] action create (bash::default line 10)
+[2014-07-19T20:13:57+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:57+09:00] DEBUG: found target_uid == current_uid, not updating owner
+[2014-07-19T20:13:57+09:00] DEBUG: found target_gid == current_gid, not updating group
+[2014-07-19T20:13:57+09:00] INFO: Processing cookbook_file[/etc/skel/.bash_logout] action create (bash::default line 16)
+[2014-07-19T20:13:57+09:00] DEBUG: cookbook_file[/etc/skel/.bash_logout] checksumming file at /etc/skel/.bash_logout.
+[2014-07-19T20:13:57+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:57+09:00] DEBUG: found target_uid == current_uid, not updating owner
+[2014-07-19T20:13:57+09:00] DEBUG: found target_gid == current_gid, not updating group
+[2014-07-19T20:13:57+09:00] INFO: Processing cookbook_file[/etc/skel/.bash_profile] action create (bash::default line 23)
+[2014-07-19T20:13:57+09:00] DEBUG: cookbook_file[/etc/skel/.bash_profile] checksumming file at /etc/skel/.bash_profile.
+[2014-07-19T20:13:57+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:57+09:00] DEBUG: found target_uid == current_uid, not updating owner
+[2014-07-19T20:13:57+09:00] DEBUG: found target_gid == current_gid, not updating group
+[2014-07-19T20:13:57+09:00] INFO: Processing cookbook_file[/etc/skel/.bash_colors] action create (bash::default line 30)
+[2014-07-19T20:13:57+09:00] DEBUG: cookbook_file[/etc/skel/.bash_colors] checksumming file at /etc/skel/.bash_colors.
+[2014-07-19T20:13:57+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:57+09:00] DEBUG: found target_uid == current_uid, not updating owner
+[2014-07-19T20:13:57+09:00] DEBUG: found target_gid == current_gid, not updating group
+[2014-07-19T20:13:57+09:00] INFO: Processing cookbook_file[/etc/skel/.bashrc] action create (bash::default line 37)
+[2014-07-19T20:13:57+09:00] DEBUG: cookbook_file[/etc/skel/.bashrc] checksumming file at /etc/skel/.bashrc.
+[2014-07-19T20:13:57+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:57+09:00] DEBUG: found target_uid == current_uid, not updating owner
+[2014-07-19T20:13:57+09:00] DEBUG: found target_gid == current_gid, not updating group
+[2014-07-19T20:13:57+09:00] INFO: Processing package[vim-enhanced] action install (vim::default line 11)
+[2014-07-19T20:13:57+09:00] DEBUG: package[vim-enhanced] checking yum info for vim-enhanced
+[2014-07-19T20:13:57+09:00] DEBUG: package[vim-enhanced] installed version: 7.2.411-1.8.el6 candidate version: 7.2.411-1.8.el6
+[2014-07-19T20:13:57+09:00] DEBUG: package[vim-enhanced] is already installed - nothing to do
+[2014-07-19T20:13:57+09:00] INFO: Processing cookbook_file[/etc/vimrc] action create (vim::default line 16)
+[2014-07-19T20:13:57+09:00] DEBUG: cookbook_file[/etc/vimrc] checksumming file at /etc/vimrc.
+[2014-07-19T20:13:57+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:57+09:00] DEBUG: found target_uid == current_uid, not updating owner
+[2014-07-19T20:13:57+09:00] DEBUG: found target_gid == current_gid, not updating group
+[2014-07-19T20:13:57+09:00] INFO: Processing package[tmux] action install (tmux::default line 10)
+[2014-07-19T20:13:57+09:00] DEBUG: package[tmux] checking yum info for tmux
+[2014-07-19T20:13:57+09:00] DEBUG: package[tmux] installed version: 1.6-3.el6 candidate version: 1.6-3.el6
+[2014-07-19T20:13:57+09:00] DEBUG: package[tmux] is already installed - nothing to do
+[2014-07-19T20:13:57+09:00] INFO: Processing cookbook_file[/etc/tmux.conf] action create (tmux::default line 14)
+[2014-07-19T20:13:57+09:00] DEBUG: cookbook_file[/etc/tmux.conf] checksumming file at /etc/tmux.conf.
+[2014-07-19T20:13:57+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:57+09:00] DEBUG: found target_uid == current_uid, not updating owner
+[2014-07-19T20:13:57+09:00] DEBUG: found target_gid == current_gid, not updating group
+[2014-07-19T20:13:57+09:00] INFO: Processing file[/etc/profile.d/tmux.sh] action create (tmux::default line 21)
+[2014-07-19T20:13:57+09:00] DEBUG: file[/etc/profile.d/tmux.sh] checksumming file at /etc/profile.d/tmux.sh.
+[2014-07-19T20:13:57+09:00] DEBUG: calculating checksum of /tmp/.tmux.sh20140719-17631-1pke5mw to compare with 5c4c2c0aebc2dfb8e52f8b3ecce4a03f5642376bf00e12974739bf7bddc5b4f7
+[2014-07-19T20:13:57+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:57+09:00] DEBUG: found target_uid == current_uid, not updating owner
+[2014-07-19T20:13:57+09:00] DEBUG: found target_gid == current_gid, not updating group
+[2014-07-19T20:13:57+09:00] INFO: Processing package[dnsmasq] action install (dnsmasq::default line 11)
+[2014-07-19T20:13:57+09:00] DEBUG: package[dnsmasq] checking yum info for dnsmasq
+[2014-07-19T20:13:57+09:00] DEBUG: package[dnsmasq] installed version: 2.48-13.el6 candidate version: 2.48-13.el6
+[2014-07-19T20:13:57+09:00] DEBUG: package[dnsmasq] is already installed - nothing to do
+[2014-07-19T20:13:57+09:00] INFO: Processing service[dnsmasq] action enable (dnsmasq::default line 16)
+[2014-07-19T20:13:57+09:00] DEBUG: service[dnsmasq] supports status, running
+[2014-07-19T20:13:57+09:00] INFO: service[dnsmasq] enabled
+[2014-07-19T20:13:57+09:00] INFO: Processing cookbook_file[/etc/hosts] action create (dnsmasq::default line 21)
+[2014-07-19T20:13:57+09:00] DEBUG: cookbook_file[/etc/hosts] checksumming file at /etc/hosts.
+[2014-07-19T20:13:57+09:00] DEBUG: cookbook_file[/etc/hosts] staging /root/chef-repo-net/site-cookbooks/dnsmasq/files/default/hosts to /tmp/.hosts20140719-17631-p69sjz
+[2014-07-19T20:13:57+09:00] DEBUG: calculating checksum of /tmp/.hosts20140719-17631-p69sjz to compare with 498f494232085ec83303a2bc6f04bea840c2b210fbbeda31a46a6e5674d4fc0e
+[2014-07-19T20:13:57+09:00] DEBUG: running: diff -u /etc/hosts /tmp/.hosts20140719-17631-p69sjz
+[2014-07-19T20:13:57+09:00] INFO: cookbook_file[/etc/hosts] backed up to /var/chef/backup/etc/hosts.chef-20140719201357.594090
+[2014-07-19T20:13:57+09:00] DEBUG: reading modes from /etc/hosts file
+[2014-07-19T20:13:57+09:00] DEBUG: applying mode = 644, uid = 0, gid = 0 to /tmp/.hosts20140719-17631-p69sjz
+[2014-07-19T20:13:57+09:00] DEBUG: moving temporary file /tmp/.hosts20140719-17631-p69sjz into place at /etc/hosts
+[2014-07-19T20:13:57+09:00] INFO: cookbook_file[/etc/hosts] updated file contents /etc/hosts
+[2014-07-19T20:13:57+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:57+09:00] DEBUG: found target_uid == current_uid, not updating owner
+[2014-07-19T20:13:57+09:00] DEBUG: found target_gid == current_gid, not updating group
+[2014-07-19T20:13:57+09:00] DEBUG: Restoring selinux security content with /sbin/restorecon -R /etc/hosts
+[2014-07-19T20:13:57+09:00] INFO: Processing cookbook_file[/etc/dnsmasq.conf] action create (dnsmasq::default line 29)
+[2014-07-19T20:13:57+09:00] DEBUG: cookbook_file[/etc/dnsmasq.conf] checksumming file at /etc/dnsmasq.conf.
+[2014-07-19T20:13:57+09:00] DEBUG: cookbook_file[/etc/dnsmasq.conf] staging /root/chef-repo-net/site-cookbooks/dnsmasq/files/default/dnsmasq.conf to /tmp/.dnsmasq.conf20140719-17631-akll5k
+[2014-07-19T20:13:57+09:00] DEBUG: calculating checksum of /tmp/.dnsmasq.conf20140719-17631-akll5k to compare with b0e4a8d8265cb89cd39f16ecc7351570c56ff3fac001a9d2b706627b6a5100c5
+[2014-07-19T20:13:57+09:00] DEBUG: running: diff -u /etc/dnsmasq.conf /tmp/.dnsmasq.conf20140719-17631-akll5k
+[2014-07-19T20:13:57+09:00] INFO: cookbook_file[/etc/dnsmasq.conf] backed up to /var/chef/backup/etc/dnsmasq.conf.chef-20140719201357.896395
+[2014-07-19T20:13:57+09:00] DEBUG: reading modes from /etc/dnsmasq.conf file
+[2014-07-19T20:13:57+09:00] DEBUG: applying mode = 644, uid = 0, gid = 0 to /tmp/.dnsmasq.conf20140719-17631-akll5k
+[2014-07-19T20:13:57+09:00] DEBUG: moving temporary file /tmp/.dnsmasq.conf20140719-17631-akll5k into place at /etc/dnsmasq.conf
+[2014-07-19T20:13:57+09:00] INFO: cookbook_file[/etc/dnsmasq.conf] updated file contents /etc/dnsmasq.conf
+[2014-07-19T20:13:57+09:00] DEBUG: found target_mode == current_mode, not updating mode
+[2014-07-19T20:13:57+09:00] DEBUG: found target_uid == current_uid, not updating owner
+[2014-07-19T20:13:57+09:00] DEBUG: found target_gid == current_gid, not updating group
+[2014-07-19T20:13:57+09:00] DEBUG: Restoring selinux security content with /sbin/restorecon -R /etc/dnsmasq.conf
+[2014-07-19T20:13:58+09:00] INFO: cookbook_file[/etc/dnsmasq.conf] not queuing delayed action restart on service[dnsmasq] (delayed), as it's already been queued
+[2014-07-19T20:13:58+09:00] INFO: cookbook_file[/etc/hosts] sending restart action to service[dnsmasq] (delayed)
+[2014-07-19T20:13:58+09:00] INFO: Processing service[dnsmasq] action restart (dnsmasq::default line 16)
+[2014-07-19T20:13:58+09:00] DEBUG: service[dnsmasq] supports status, running
+[2014-07-19T20:13:59+09:00] INFO: service[dnsmasq] restarted
+[2014-07-19T20:13:59+09:00] INFO: Chef Run complete in 9.2774769 seconds
+[2014-07-19T20:13:59+09:00] INFO: Running report handlers
+[2014-07-19T20:13:59+09:00] INFO: Report handlers complete
+[2014-07-19T20:13:59+09:00] DEBUG: Forked instance successfully reaped (pid: 17631)
+[2014-07-19T20:13:59+09:00] DEBUG: Exiting

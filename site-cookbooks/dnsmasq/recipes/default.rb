@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe "simple_iptables"
+
 node['dnsmasq']['packages'].each{|value|
 	package value do
 		action :install
@@ -33,3 +35,17 @@ cookbook_file "/etc/dnsmasq.conf" do
 	source "dnsmasq.conf"
 	notifies :restart, "service[dnsmasq]", :delayed
 end
+
+cookbook_file "/etc/resolv.conf" do
+	owner "root"
+	group "root"
+	mode "0644"
+	source "resolv.conf"
+	notifies :restart, "service[dnsmasq]", :delayed
+end
+
+simple_iptables_rule 'dnsmasq' do
+	rule '-p udp --dport 67'
+	jump 'ACCEPT'
+end
+

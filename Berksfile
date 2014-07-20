@@ -1,6 +1,7 @@
 site :opscode
 
 cookbook 'yum-epel'
+cookbook 'simple_iptables'
 
 cookbook 'bash', git: 'https://github.com/karuru6225/cookbook-bash.git'
 cookbook 'basic-packages', git: 'https://github.com/karuru6225/cookbook-basic-packages.git'
